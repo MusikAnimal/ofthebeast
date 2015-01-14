@@ -1,3 +1,81 @@
+@import 'mixins';
+
+html {
+  height: 100%;
+}
+
 body {
-  background: #292E37;
+  background-color: $bgcolor;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#viewport {
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 994px;
+  @media screen and (max-width: 994px) {
+    width: 100%;
+  }
+}
+
+header {
+  color: white;
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  position: relative;
+  text-align: center;
+  top: 50px;
+  z-index: 100;
+  @media screen and (max-width: 750px) {
+    font-size: 60px;
+  }
+  @media screen and (max-width: 550px) {
+    font-size: 40px;
+  }
+}
+
+.ground {
+  background: url(images/layers/resized/ground.png) no-repeat;
+  bottom: 0;
+  height: 389px;
+  @include staticCenter;
+}
+
+.pyramids {
+  background: url(images/layers/resized/pyramids.png) 0 44px no-repeat;
+  bottom: 0;
+  height: 454px;
+  @include staticCenter;
+  @include prefix(animation, melt_loop 8s linear 0s infinite alternate);
+  // transform: translate(100px, 50px) rotateX(45deg) rotateY(-200deg) rotateZ(10deg);
+}
+@include keyframes(melt_loop) {
+  0% { @include prefix(filter, saturate(0)); }
+  50% { @include prefix(filter, saturate(8)); }
+  100% { @include prefix(filter, saturate(0)); }
+}
+
+.shader {
+  height: 100%;
+  width: 100%;
+  &::before, &::after {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 150px;
+  }
+  &::before {
+    left: 0;
+    @include fader('left');
+  }
+  &::after {
+    right: 0;
+    @include fader('right');
+  }
 }

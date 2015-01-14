@@ -1,0 +1,57 @@
+$bgcolor: #292E37;
+$fullscreen: 994px;
+
+@mixin center($horiz: true, $vert: true) {
+  position: absolute;
+  @if($vert) {
+    top: 50%;
+    transform: translateY(-50%);
+  } @else {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@mixin staticCenter($size: $fullscreen) {
+  left: 50%;
+  margin-left: -($size / 2);
+  position: absolute;
+  width: $size;
+}
+
+@mixin centerX {
+  @include center(true,false);
+}
+
+@mixin fader($direction: 'left') {
+  $from: 1;
+  $to: 0;
+  @if $direction == 'right' {
+    $from: 0;
+    $to: 1;
+  }
+  background: rgba($bgcolor,0) -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba($bgcolor,$from)), to(rgba($bgcolor,$to)));
+  background: rgba($bgcolor,0) -moz-linear-gradient(left, rgba($bgcolor,$from), rgba($bgcolor,$to));
+}
+
+@mixin prefix ($prop, $val) {
+  @each $pre in -webkit-, -moz-, -ms-, -o- {
+    #{$pre}#{$prop}: #{$val};
+  }
+  #{$prop}: #{$val};
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

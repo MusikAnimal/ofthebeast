@@ -1,2 +1,151 @@
+html {
+  height: 100%; }
+
 body {
-  background: #292E37; }
+  background-color: #292E37;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+#viewport {
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 994px; }
+  @media screen and (max-width: 994px) {
+    #viewport {
+      width: 100%; } }
+
+header {
+  color: white;
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  position: relative;
+  text-align: center;
+  top: 50px;
+  z-index: 100; }
+  @media screen and (max-width: 750px) {
+    header {
+      font-size: 60px; } }
+  @media screen and (max-width: 550px) {
+    header {
+      font-size: 40px; } }
+
+.ground {
+  background: url(images/layers/resized/ground.png) no-repeat;
+  bottom: 0;
+  height: 389px;
+  left: 50%;
+  margin-left: -497px;
+  position: absolute;
+  width: 994px; }
+
+.pyramids {
+  background: url(images/layers/resized/pyramids.png) 0 44px no-repeat;
+  bottom: 0;
+  height: 454px;
+  left: 50%;
+  margin-left: -497px;
+  position: absolute;
+  width: 994px;
+  -webkit-animation: melt_loop 8s linear 0s infinite alternate;
+  -moz-animation: melt_loop 8s linear 0s infinite alternate;
+  -ms-animation: melt_loop 8s linear 0s infinite alternate;
+  -o-animation: melt_loop 8s linear 0s infinite alternate;
+  animation: melt_loop 8s linear 0s infinite alternate; }
+
+@-webkit-keyframes melt_loop {
+  0% {
+    -webkit-filter: saturate(0);
+    -moz-filter: saturate(0);
+    -ms-filter: saturate(0);
+    -o-filter: saturate(0);
+    filter: saturate(0); }
+  50% {
+    -webkit-filter: saturate(8);
+    -moz-filter: saturate(8);
+    -ms-filter: saturate(8);
+    -o-filter: saturate(8);
+    filter: saturate(8); }
+  100% {
+    -webkit-filter: saturate(0);
+    -moz-filter: saturate(0);
+    -ms-filter: saturate(0);
+    -o-filter: saturate(0);
+    filter: saturate(0); } }
+@-moz-keyframes melt_loop {
+  0% {
+    -webkit-filter: saturate(0);
+    -moz-filter: saturate(0);
+    -ms-filter: saturate(0);
+    -o-filter: saturate(0);
+    filter: saturate(0); }
+  50% {
+    -webkit-filter: saturate(8);
+    -moz-filter: saturate(8);
+    -ms-filter: saturate(8);
+    -o-filter: saturate(8);
+    filter: saturate(8); }
+  100% {
+    -webkit-filter: saturate(0);
+    -moz-filter: saturate(0);
+    -ms-filter: saturate(0);
+    -o-filter: saturate(0);
+    filter: saturate(0); } }
+@-ms-keyframes melt_loop {
+  0% {
+    -webkit-filter: saturate(0);
+    -moz-filter: saturate(0);
+    -ms-filter: saturate(0);
+    -o-filter: saturate(0);
+    filter: saturate(0); }
+  50% {
+    -webkit-filter: saturate(8);
+    -moz-filter: saturate(8);
+    -ms-filter: saturate(8);
+    -o-filter: saturate(8);
+    filter: saturate(8); }
+  100% {
+    -webkit-filter: saturate(0);
+    -moz-filter: saturate(0);
+    -ms-filter: saturate(0);
+    -o-filter: saturate(0);
+    filter: saturate(0); } }
+@keyframes melt_loop {
+  0% {
+    -webkit-filter: saturate(0);
+    -moz-filter: saturate(0);
+    -ms-filter: saturate(0);
+    -o-filter: saturate(0);
+    filter: saturate(0); }
+  50% {
+    -webkit-filter: saturate(8);
+    -moz-filter: saturate(8);
+    -ms-filter: saturate(8);
+    -o-filter: saturate(8);
+    filter: saturate(8); }
+  100% {
+    -webkit-filter: saturate(0);
+    -moz-filter: saturate(0);
+    -ms-filter: saturate(0);
+    -o-filter: saturate(0);
+    filter: saturate(0); } }
+.shader {
+  height: 100%;
+  width: 100%; }
+  .shader::before, .shader::after {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 150px; }
+  .shader::before {
+    left: 0;
+    background: rgba(41, 46, 55, 0) -webkit-gradient(linear, 0% 0%, 100% 0%, from(#292e37), to(rgba(41, 46, 55, 0)));
+    background: rgba(41, 46, 55, 0) -moz-linear-gradient(left, #292e37, rgba(41, 46, 55, 0)); }
+  .shader::after {
+    right: 0;
+    background: rgba(41, 46, 55, 0) -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(41, 46, 55, 0)), to(#292e37));
+    background: rgba(41, 46, 55, 0) -moz-linear-gradient(left, rgba(41, 46, 55, 0), #292e37); }
