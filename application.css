@@ -19,6 +19,7 @@ body {
 
 header {
   color: white;
+  font-family: serif;
   font-size: 80px;
   font-weight: bold;
   letter-spacing: 5px;
@@ -132,6 +133,83 @@ header {
     -ms-filter: saturate(0);
     -o-filter: saturate(0);
     filter: saturate(0); } }
+.guy {
+  background: url(images/layers/resized/guy.png) 0 44px no-repeat;
+  bottom: 0;
+  height: 578px;
+  position: absolute;
+  right: 145px;
+  width: 599px;
+  z-index: 15; }
+  @media screen and (max-width: 994px) {
+    .guy {
+      background-position: 0 1px;
+      background-size: 479px 462px;
+      height: 462px;
+      width: 479px; } }
+  @media screen and (max-width: 550px) {
+    .guy {
+      height: 0px;
+      width: 40px; } }
+
+.guy-melt {
+  background: url(images/layers/resized/guy_melt.png) 0 44px no-repeat;
+  bottom: 0;
+  height: 529px;
+  opacity: 0;
+  position: absolute;
+  right: 145px;
+  width: 545px;
+  z-index: 15;
+  -webkit-transition: opacity 5s ease;
+  -moz-transition: opacity 5s ease;
+  -ms-transition: opacity 5s ease;
+  -o-transition: opacity 5s ease;
+  transition: opacity 5s ease; }
+  .guy-melt.visible {
+    opacity: 1; }
+  @media screen and (max-width: 994px) {
+    .guy-melt {
+      background-position: 0 1px;
+      background-size: 423px 436px;
+      height: 423px;
+      right: 134px;
+      width: 436px; } }
+  @media screen and (max-width: 550px) {
+    .guy-melt {
+      height: 0px;
+      width: 40px; } }
+
+.painting {
+  background: url(images/layers/resized/painting.png) no-repeat;
+  bottom: 256px;
+  height: 486px;
+  left: 182px;
+  position: absolute;
+  width: 314px;
+  z-index: 10; }
+  @media screen and (max-width: 994px) {
+    .painting {
+      background-size: 251px 389px;
+      height: 389px;
+      width: 251px; } }
+  @media screen and (max-width: 550px) {
+    .painting {
+      height: 0px;
+      width: 40px; } }
+  .painting .dude {
+    background: url(images/layers/resized/dude.png) no-repeat;
+    bottom: 123px;
+    height: 163px;
+    position: absolute;
+    right: 63px;
+    width: 125px; }
+    @media screen and (max-width: 994px) {
+      .painting .dude {
+        background-size: 100px 130px;
+        height: 130px;
+        width: 100px; } }
+
 .shader {
   height: 100%;
   width: 100%; }
