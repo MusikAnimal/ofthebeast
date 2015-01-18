@@ -6,9 +6,17 @@ html {
 
 body {
   background-color: $bgcolor;
+  color: white;
+  font-family: $font;
   height: 100%;
   margin: 0;
   padding: 0;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 #viewport {
@@ -23,20 +31,76 @@ body {
 }
 
 header {
-  color: white;
-  font-family: serif;
-  font-size: 80px;
+  font-size: 72px;
   font-weight: bold;
   letter-spacing: 5px;
   position: relative;
-  text-align: center;
-  top: 50px;
+  top: 100px;
   z-index: 100;
   @media screen and (max-width: 750px) {
     font-size: 60px;
   }
   @media screen and (max-width: 550px) {
-    font-size: 40px;
+    font-size: 52px;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 44px;
+  }
+}
+
+nav {
+  font-size: 26px;
+  position: relative;
+  text-transform: uppercase;
+  top: 100px;
+  z-index: 100;
+  @media screen and (max-width: 750px) {
+    font-size: 22px;
+  }
+  @media screen and (max-width: 550px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 18px;
+  }
+  a {
+    display: inline-block;
+    margin-right: 0.7em;
+    // text-shadow:
+    //   -1px -1px 0 #888,
+    //   1px -1px 0 #888,
+    //   -1px 1px 0 #888,
+    //   1px 1px 0 #888;
+    &:hover {
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+section {
+  bottom: 0;
+  display: block;
+  height: 100%;
+  @include centerX;
+  &.home {
+    width: 666px;
+    @media screen and (max-width: 750px) {
+      width: 532px;
+    }
+    @media screen and (max-width: 550px) {
+      width: 400px;
+    }
+  }
+}
+
+.layer {
+  // opacity: 0;
+  pointer-events: none;
+  @include prefix(transition,opacity 5s ease);
+  &.visible {
+    opacity: 1;    
   }
 }
 
@@ -66,62 +130,65 @@ header {
   bottom: 0;
   height: 578px;
   position: absolute;
-  right: 145px;
+  right: 0;
   width: 599px;
   z-index: 15;
-  @media screen and (max-width: 994px) {
+  @media screen and (max-width: 750px) {
     background-position: 0 1px;
     background-size: 479px 462px;
     height: 462px;
     width: 479px;
   }
   @media screen and (max-width: 550px) {
-    height: 0px;
-    width: 40px;
+    background-size: 359px 347px;
+    height: 347px;
+    width: 359px;
   }
 }
-.guy-melt {
-  background: url(images/layers/resized/guy_melt.png) 0 44px no-repeat;
-  bottom: 0;
-  height: 529px;
-  opacity: 0;
-  position: absolute;
-  right: 145px;
-  width: 545px;
-  z-index: 15;
-  @include prefix(transition,opacity 5s ease);
-  &.visible {
-    opacity: 1;
-  }
-  @media screen and (max-width: 994px) {
-    background-position: 0 1px;
-    background-size: 423px 436px;
-    height: 423px;
-    right: 134px;
-    width: 436px;
-  }
-  @media screen and (max-width: 550px) {
-    height: 0px;
-    width: 40px;
-  }
-}
+// .guy-melt {
+//   background: url(images/layers/resized/guy_melt.png) no-repeat;
+//   bottom: 0;
+//   height: 529px;
+//   opacity: 0;
+//   position: absolute;
+//   right: 0;
+//   width: 545px;
+//   z-index: 15;
+//   @include prefix(transition,opacity 5s ease);
+//   &.visible {
+//     opacity: 1;
+//   }
+//   @media screen and (max-width: 750px) {
+//     background-position: 0 1px;
+//     background-size: 423px 436px;
+//     height: 423px;
+//     width: 436px;
+//   }
+//   @media screen and (max-width: 550px) {
+//     height: 0px;
+//     width: 40px;
+//   }
+// }
 
 .painting {
   background: url(images/layers/resized/painting.png) no-repeat;
   bottom: 256px;
   height: 486px;
-  left: 182px;
+  left: 0;
   position: absolute;
   width: 314px;
   z-index: 10;
-  @media screen and (max-width: 994px) {
+  @media screen and (max-width: 750px) {
     background-size: 251px 389px;
+    bottom: 238px;
     height: 389px;
     width: 251px;
   }
   @media screen and (max-width: 550px) {
-    height: 0px;
-    width: 40px;
+    background-size: 188px 292px;
+    bottom: 176px;
+    height: 292px;
+    width: 188px;
   }
   .dude {
     background: url(images/layers/resized/dude.png) no-repeat;
@@ -130,10 +197,19 @@ header {
     position: absolute;
     right: 63px;
     width: 125px;
-    @media screen and (max-width: 994px) {
+    @media screen and (max-width: 750px) {
       background-size: 100px 130px;
+      bottom: 99px;
       height: 130px;
+      right: 51px;
       width: 100px;
+    }
+    @media screen and (max-width: 550px) {
+      background-size: 75px 99px;
+      bottom: 77px;
+      height: 96px;
+      right: 38px;
+      width: 75px;
     }
   }
 }
@@ -146,6 +222,7 @@ header {
     display: block;
     height: 100%;
     position: absolute;
+    top: 0;
     width: 150px;
   }
   &::before {

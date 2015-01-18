@@ -5,15 +5,24 @@
     %script{src: "application.js"}
     %link{rel: "stylesheet", href: "application.css", type: "text/css"}
   %body
-    %nav
     %div#viewport
       %header
-        OF THE BEAST
-      %div.ground
-      %div.pyramids
-      %div.guy
-      %div.guy-melt
-      %div.painting
-        %div.dude
+        %a{href: "#/"} OF THE BEAST
+      %nav
+        %a{href: "#/news"} News
+        %a{href: "#/live"} Live
+        %a{href: "#/music"} Music
+        %a{href: "#/join"} Join Mailing List
+      %main
+        %div.layer.ground
+        %div.layer.pyramids
+        %section.home
+          %div.layer.guy
+          / %div.layer.guy-melt
+          %div.layer.painting
+            %div.layer.dude
+        %section.news
+        %section.live
+        %section.music
+        %section.join
       %div.shader
-    %footer

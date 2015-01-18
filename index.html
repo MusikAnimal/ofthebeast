@@ -6,20 +6,32 @@
     <link href='application.css' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <nav></nav>
     <div id='viewport'>
       <header>
-        OF THE BEAST
+        <a href='#/'>OF THE BEAST</a>
       </header>
-      <div class='ground'></div>
-      <div class='pyramids'></div>
-      <div class='guy'></div>
-      <div class='guy-melt'></div>
-      <div class='painting'>
-        <div class='dude'></div>
-      </div>
+      <nav>
+        <a href='#/news'>News</a>
+        <a href='#/live'>Live</a>
+        <a href='#/music'>Music</a>
+        <a href='#/join'>Join Mailing List</a>
+      </nav>
+      <main>
+        <div class='layer ground'></div>
+        <div class='layer pyramids'></div>
+        <section class='home'>
+          <div class='layer guy'></div>
+          <!-- %div.layer.guy-melt -->
+          <div class='layer painting'>
+            <div class='layer dude'></div>
+          </div>
+        </section>
+        <section class='news'></section>
+        <section class='live'></section>
+        <section class='music'></section>
+        <section class='join'></section>
+      </main>
       <div class='shader'></div>
     </div>
-    <footer></footer>
   </body>
 </html>
