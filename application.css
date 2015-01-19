@@ -252,18 +252,19 @@ section {
 .shader {
   height: 100%;
   width: 100%; }
-  .shader::before, .shader::after {
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    width: 150px; }
-  .shader::before {
-    left: 0;
-    background: rgba(41, 46, 55, 0) -webkit-gradient(linear, 0% 0%, 100% 0%, from(#292e37), to(rgba(41, 46, 55, 0)));
-    background: rgba(41, 46, 55, 0) -moz-linear-gradient(left, #292e37, rgba(41, 46, 55, 0)); }
-  .shader::after {
-    right: 0;
-    background: rgba(41, 46, 55, 0) -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(41, 46, 55, 0)), to(#292e37));
-    background: rgba(41, 46, 55, 0) -moz-linear-gradient(left, rgba(41, 46, 55, 0), #292e37); }
+  @media screen and (min-width: 994px) {
+    .shader::before, .shader::after {
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 150px; }
+    .shader::before {
+      left: 0;
+      background: rgba(41, 46, 55, 0) -webkit-gradient(linear, 0% 0%, 100% 0%, from(#292e37), to(rgba(41, 46, 55, 0)));
+      background: rgba(41, 46, 55, 0) -moz-linear-gradient(left, #292e37, rgba(41, 46, 55, 0)); }
+    .shader::after {
+      right: 0;
+      background: rgba(41, 46, 55, 0) -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(41, 46, 55, 0)), to(#292e37));
+      background: rgba(41, 46, 55, 0) -moz-linear-gradient(left, rgba(41, 46, 55, 0), #292e37); } }
