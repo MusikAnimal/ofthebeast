@@ -1,3 +1,86 @@
+.home {
+  width: 666px; }
+  @media screen and (max-width: 750px) {
+    .home {
+      width: 532px; } }
+  @media screen and (max-width: 550px) {
+    .home {
+      width: 400px; } }
+
+.guy {
+  background: url(images/layers/resized/guy.png) 0 44px no-repeat;
+  bottom: 0;
+  height: 578px;
+  position: absolute;
+  right: 0;
+  width: 599px;
+  z-index: 15; }
+  @media screen and (max-width: 750px) {
+    .guy {
+      background-position: 0 1px;
+      background-size: 479px 462px;
+      height: 462px;
+      width: 479px; } }
+  @media screen and (max-width: 550px) {
+    .guy {
+      background-size: 359px 347px;
+      height: 347px;
+      width: 359px; } }
+
+.painting {
+  background: url(images/layers/resized/painting.png) no-repeat;
+  bottom: 256px;
+  height: 486px;
+  left: 0;
+  position: absolute;
+  width: 314px;
+  z-index: 10; }
+  @media screen and (max-width: 750px) {
+    .painting {
+      background-size: 251px 389px;
+      bottom: 238px;
+      height: 389px;
+      width: 251px; } }
+  @media screen and (max-width: 550px) {
+    .painting {
+      background-size: 188px 292px;
+      bottom: 176px;
+      height: 292px;
+      width: 188px; } }
+  .painting .dude {
+    background: url(images/layers/resized/dude.png) no-repeat;
+    bottom: 123px;
+    height: 163px;
+    position: absolute;
+    right: 63px;
+    width: 125px; }
+    @media screen and (max-width: 750px) {
+      .painting .dude {
+        background-size: 100px 130px;
+        bottom: 99px;
+        height: 130px;
+        right: 51px;
+        width: 100px; } }
+    @media screen and (max-width: 550px) {
+      .painting .dude {
+        background-size: 75px 99px;
+        bottom: 77px;
+        height: 96px;
+        right: 38px;
+        width: 75px; } }
+
+.live {
+  top: 250px;
+  width: 100%; }
+  .live iframe {
+    width: 60%; }
+
+.music {
+  top: 250px;
+  width: 100%; }
+  .music iframe {
+    width: 68%; }
+
 html {
   height: 100%; }
 
@@ -62,21 +145,20 @@ nav {
     nav a:last-child {
       margin: 0; }
 
+main {
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
 section {
   bottom: 0;
-  display: block;
+  display: none;
   height: 100%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%); }
-  section.home {
-    width: 666px; }
-    @media screen and (max-width: 750px) {
-      section.home {
-        width: 532px; } }
-    @media screen and (max-width: 550px) {
-      section.home {
-        width: 400px; } }
 
 .layer {
   pointer-events: none;
@@ -187,68 +269,6 @@ section {
     -ms-filter: saturate(0);
     -o-filter: saturate(0);
     filter: saturate(0); } }
-.guy {
-  background: url(images/layers/resized/guy.png) 0 44px no-repeat;
-  bottom: 0;
-  height: 578px;
-  position: absolute;
-  right: 0;
-  width: 599px;
-  z-index: 15; }
-  @media screen and (max-width: 750px) {
-    .guy {
-      background-position: 0 1px;
-      background-size: 479px 462px;
-      height: 462px;
-      width: 479px; } }
-  @media screen and (max-width: 550px) {
-    .guy {
-      background-size: 359px 347px;
-      height: 347px;
-      width: 359px; } }
-
-.painting {
-  background: url(images/layers/resized/painting.png) no-repeat;
-  bottom: 256px;
-  height: 486px;
-  left: 0;
-  position: absolute;
-  width: 314px;
-  z-index: 10; }
-  @media screen and (max-width: 750px) {
-    .painting {
-      background-size: 251px 389px;
-      bottom: 238px;
-      height: 389px;
-      width: 251px; } }
-  @media screen and (max-width: 550px) {
-    .painting {
-      background-size: 188px 292px;
-      bottom: 176px;
-      height: 292px;
-      width: 188px; } }
-  .painting .dude {
-    background: url(images/layers/resized/dude.png) no-repeat;
-    bottom: 123px;
-    height: 163px;
-    position: absolute;
-    right: 63px;
-    width: 125px; }
-    @media screen and (max-width: 750px) {
-      .painting .dude {
-        background-size: 100px 130px;
-        bottom: 99px;
-        height: 130px;
-        right: 51px;
-        width: 100px; } }
-    @media screen and (max-width: 550px) {
-      .painting .dude {
-        background-size: 75px 99px;
-        bottom: 77px;
-        height: 96px;
-        right: 38px;
-        width: 75px; } }
-
 .shader {
   height: 100%;
   width: 100%; }
