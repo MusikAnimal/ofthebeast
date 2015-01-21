@@ -24,6 +24,23 @@ $fullscreen: 994px;
   width: $size;
 }
 
+@mixin verticalMirror($height, $transform: 1) {
+  &::before, &::after {
+    content: "";
+    height: $height;
+    position: absolute;
+    @include staticCenter;
+  }
+  &::before {
+    @if $transform == 1 {
+      margin-top: $height - 3;
+    } @else {
+      margin-bottom: $height - 3;
+    }
+    @include prefix(transform, scaleY($transform));
+  }
+}
+
 @mixin centerX {
   @include center(true,false);
 }
