@@ -1,6 +1,6 @@
 ;(function($) {
   app = Sammy('body', function() {
-    this.get('#/', function() {
+    this.get('/', function() {
       $(".home").fadeIn(1000, function() {
         $(".guy-melt").addClass("visible");
       });

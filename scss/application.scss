@@ -1,4 +1,5 @@
 @import 'mixins';
+@import 'splash';
 @import 'home';
 @import 'live';
 @import 'music';
@@ -102,8 +103,32 @@ section {
   pointer-events: none;
   @include prefix(transition,opacity 5s ease);
   &.visible {
-    opacity: 1;    
+    opacity: 1;
   }
+}
+
+.stars {
+  background: url(images/layers/resized/stars.png) no-repeat;
+  bottom: 0;
+  height: 809px;
+  @include staticCenter;
+}
+
+.grid {
+  background: url(images/layers/resized/grid.png) no-repeat;
+  bottom: 0;
+  height: 989px;
+  @include staticCenter;
+}
+
+.blur1 {
+  background: url(images/layers/resized/blur1.png) no-repeat;
+  bottom: 0;
+  height: 686px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 567px;
 }
 
 .ground {

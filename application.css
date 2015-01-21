@@ -1,3 +1,15 @@
+body.splash {
+  @import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
+  font-family: 'Permanent Marker', serif; }
+  body.splash iframe {
+    height: 315px;
+    width: 560px; }
+  body.splash header {
+    margin-top: 100px;
+    position: initial; }
+  body.splash div {
+    font-size: 30px; }
+
 .home {
   width: 666px; }
   @media screen and (max-width: 750px) {
@@ -73,13 +85,19 @@
   top: 250px;
   width: 100%; }
   .live iframe {
-    width: 60%; }
+    width: 68%; }
+    @media screen and (max-width: 550px) {
+      .live iframe {
+        width: 88%; } }
 
 .music {
   top: 250px;
   width: 100%; }
   .music iframe {
     width: 68%; }
+    @media screen and (max-width: 550px) {
+      .music iframe {
+        width: 88%; } }
 
 html {
   height: 100%; }
@@ -169,6 +187,33 @@ section {
   transition: opacity 5s ease; }
   .layer.visible {
     opacity: 1; }
+
+.stars {
+  background: url(images/layers/resized/stars.png) no-repeat;
+  bottom: 0;
+  height: 809px;
+  left: 50%;
+  margin-left: -497px;
+  position: absolute;
+  width: 994px; }
+
+.grid {
+  background: url(images/layers/resized/grid.png) no-repeat;
+  bottom: 0;
+  height: 989px;
+  left: 50%;
+  margin-left: -497px;
+  position: absolute;
+  width: 994px; }
+
+.blur1 {
+  background: url(images/layers/resized/blur1.png) no-repeat;
+  bottom: 0;
+  height: 686px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 567px; }
 
 .ground {
   background: url(images/layers/resized/ground.png) no-repeat;
