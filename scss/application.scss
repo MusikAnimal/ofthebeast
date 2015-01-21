@@ -38,19 +38,20 @@ header {
   font-size: 72px;
   font-weight: bold;
   letter-spacing: 5px;
-  position: relative;
-  top: 100px;
+  margin-top: 100px;
+  position: inherit;
   z-index: 100;
   @media screen and (max-width: 750px) {
     font-size: 11vw;
+    margin-top: 15vw;
   }
 }
 
 nav {
   font-size: 26px;
-  position: relative;
+  margin-top: 10px;
+  position: inherit;
   text-transform: uppercase;
-  top: 100px;
   z-index: 100;
   @media screen and (max-width: 750px) {
     font-size: 4vw;
