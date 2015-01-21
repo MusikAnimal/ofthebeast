@@ -6,11 +6,19 @@ body.splash {
   iframe {
     height: 315px;
     width: 560px;
+    @media screen and (max-width: 786px) {
+      width: 100%;
+      width: calc(100% - 10px);
+    }
   }
 
   header {
     margin-top: 100px;
     position: initial;
+    @media screen and (max-width: 786px) {
+      margin-top: 50px;
+      font-size: 36px;
+    }
   }
 
   div {

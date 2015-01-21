@@ -4,9 +4,17 @@ body.splash {
   body.splash iframe {
     height: 315px;
     width: 560px; }
+    @media screen and (max-width: 786px) {
+      body.splash iframe {
+        width: 100%;
+        width: calc(100% - 10px); } }
   body.splash header {
     margin-top: 100px;
     position: initial; }
+    @media screen and (max-width: 786px) {
+      body.splash header {
+        margin-top: 50px;
+        font-size: 36px; } }
   body.splash div {
     font-size: 30px; }
 
