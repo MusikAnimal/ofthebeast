@@ -7,9 +7,13 @@ $fullscreen: 994px;
   @if($vert) {
     top: 50%;
     transform: translateY(-50%);
-  } @else {
+  }
+  @if($horiz) {
     left: 50%;
     transform: translateX(-50%);
+  }
+  @if($horiz and $vert) {
+    transform: translate(-50%,-50%);
   }
 }
 

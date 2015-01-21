@@ -1,16 +1,22 @@
 body.splash {
   @import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
   font-family: 'Permanent Marker', serif; }
+  body.splash .autoresize {
+    margin: 0 auto;
+    max-width: 560px; }
+    body.splash .autoresize > div {
+      height: 0;
+      padding-bottom: 63%;
+      position: relative; }
   body.splash iframe {
-    height: 315px;
-    width: 560px; }
-    @media screen and (max-width: 786px) {
-      body.splash iframe {
-        width: 100%;
-        width: calc(100% - 10px); } }
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
   body.splash header {
-    margin-top: 100px;
-    position: initial; }
+    position: initial;
+    white-space: nowrap; }
     @media screen and (max-width: 786px) {
       body.splash header {
         margin-top: 50px;
