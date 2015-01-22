@@ -6,14 +6,14 @@ $fullscreen: 994px;
   position: absolute;
   @if($vert) {
     top: 50%;
-    transform: translateY(-50%);
+    @include prefix(transform,translateY(-50%));
   }
   @if($horiz) {
     left: 50%;
-    transform: translateX(-50%);
+    @include prefix(transform,translateX(-50%));
   }
   @if($horiz and $vert) {
-    transform: translate(-50%,-50%);
+    @include prefix(transform,translate(-50%,-50%));
   }
 }
 

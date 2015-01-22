@@ -23,148 +23,150 @@ a {
   text-decoration: none;
 }
 
-#viewport {
-  height: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  width: $fullscreen;
-  @media screen and (max-width: $fullscreen) {
+.dev {
+  #viewport {
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: $fullscreen;
+    @media screen and (max-width: $fullscreen) {
+      width: 100%;
+    }
+  }
+
+  header {
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-top: 100px;
+    position: inherit;
+    z-index: 100;
+    @media screen and (max-width: 750px) {
+      font-size: 11vw;
+      margin-top: 15vw;
+    }
+  }
+
+  nav {
+    font-size: 26px;
+    margin-top: 10px;
+    position: inherit;
+    text-transform: uppercase;
+    z-index: 100;
+    @media screen and (max-width: 750px) {
+      font-size: 4vw;
+    }
+    a {
+      display: inline-block;
+      margin-right: 0.7em;
+      // text-shadow:
+      //   -1px -1px 0 #888,
+      //   1px -1px 0 #888,
+      //   -1px 1px 0 #888,
+      //   1px 1px 0 #888;
+      &:hover {
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  main {
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
     width: 100%;
   }
-}
 
-header {
-  font-size: 72px;
-  font-weight: bold;
-  letter-spacing: 5px;
-  margin-top: 100px;
-  position: inherit;
-  z-index: 100;
-  @media screen and (max-width: 750px) {
-    font-size: 11vw;
-    margin-top: 15vw;
-  }
-}
-
-nav {
-  font-size: 26px;
-  margin-top: 10px;
-  position: inherit;
-  text-transform: uppercase;
-  z-index: 100;
-  @media screen and (max-width: 750px) {
-    font-size: 4vw;
-  }
-  a {
-    display: inline-block;
-    margin-right: 0.7em;
-    // text-shadow:
-    //   -1px -1px 0 #888,
-    //   1px -1px 0 #888,
-    //   -1px 1px 0 #888,
-    //   1px 1px 0 #888;
-    &:hover {
-    }
-    &:last-child {
-      margin: 0;
-    }
-  }
-}
-
-main {
-  display: block;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-section {
-  bottom: 0;
-  display: none;
-  height: 100%;
-  @include centerX;
-}
-
-.layer {
-  // opacity: 0;
-  pointer-events: none;
-  @include prefix(transition,opacity 5s ease);
-  &.visible {
-    opacity: 1;
-  }
-}
-
-.stars {
-  &::before, &::after {
-    background: url(images/layers/resized/stars.png) no-repeat;
+  section {
     bottom: 0;
+    display: none;
+    height: 100%;
+    @include centerX;
   }
-  @include verticalMirror(809px, -1);
-}
 
-.grid {
-  &::before, &::after {
-    background: url(images/layers/resized/grid.png) no-repeat;
-    top: 0;
+  .layer {
+    // opacity: 0;
+    pointer-events: none;
+    @include prefix(transition,opacity 5s ease);
+    &.visible {
+      opacity: 1;
+    }
   }
-  &::before {
-    margin-top: 100px;
-  }
-  @include verticalMirror(989px, -1);
-}
 
-.blur1 {
-  background: url(images/layers/resized/blur1.png) no-repeat;
-  bottom: 0;
-  height: 686px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 567px;
-}
-
-.ground {
-  background: url(images/layers/resized/ground.png) no-repeat;
-  bottom: 0;
-  height: 389px;
-  @include staticCenter;
-}
-
-.pyramids {
-  background: url(images/layers/resized/pyramids.png) 0 44px no-repeat;
-  bottom: 0;
-  height: 454px;
-  @include staticCenter;
-  @include prefix(animation, melt_loop 8s linear 0s infinite alternate);
-  // transform: translate(100px, 50px) rotateX(45deg) rotateY(-200deg) rotateZ(10deg);
-}
-@include keyframes(melt_loop) {
-  0% { @include prefix(filter, saturate(0)); }
-  50% { @include prefix(filter, saturate(8)); }
-  100% { @include prefix(filter, saturate(0)); }
-}
-
-.shader {
-  height: 100%;
-  width: 100%;
-  @media screen and (min-width: $fullscreen) {
+  .stars {
     &::before, &::after {
-      content: "";
-      display: block;
-      height: 100%;
-      position: absolute;
+      background: url(images/layers/resized/stars.png) no-repeat;
+      bottom: 0;
+    }
+    @include verticalMirror(809px, -1);
+  }
+
+  .grid {
+    &::before, &::after {
+      background: url(images/layers/resized/grid.png) no-repeat;
       top: 0;
-      width: 150px;
     }
     &::before {
-      left: 0;
-      @include fader('left');
+      margin-top: 100px;
     }
-    &::after {
-      right: 0;
-      @include fader('right');
+    @include verticalMirror(989px, -1);
+  }
+
+  .blur1 {
+    background: url(images/layers/resized/blur1.png) no-repeat;
+    bottom: 0;
+    height: 686px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 567px;
+  }
+
+  .ground {
+    background: url(images/layers/resized/ground.png) no-repeat;
+    bottom: 0;
+    height: 389px;
+    @include staticCenter;
+  }
+
+  .pyramids {
+    background: url(images/layers/resized/pyramids.png) 0 44px no-repeat;
+    bottom: 0;
+    height: 454px;
+    @include staticCenter;
+    @include prefix(animation, melt_loop 8s linear 0s infinite alternate);
+    // transform: translate(100px, 50px) rotateX(45deg) rotateY(-200deg) rotateZ(10deg);
+  }
+  @include keyframes(melt_loop) {
+    0% { @include prefix(filter, saturate(0)); }
+    50% { @include prefix(filter, saturate(8)); }
+    100% { @include prefix(filter, saturate(0)); }
+  }
+
+  .shader {
+    height: 100%;
+    width: 100%;
+    @media screen and (min-width: $fullscreen) {
+      &::before, &::after {
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 150px;
+      }
+      &::before {
+        left: 0;
+        @include fader('left');
+      }
+      &::after {
+        right: 0;
+        @include fader('right');
+      }
     }
   }
 }

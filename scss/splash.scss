@@ -28,7 +28,8 @@ body.splash {
   }
 
   header {
-    margin-top: 75px;
+    font-size: 72px;
+    padding-top: 75px;
     position: initial;
     white-space: nowrap;
     @media screen and (max-width: 786px) {
@@ -39,5 +40,79 @@ body.splash {
 
   div {
     font-size: 30px;
+  }
+
+  .content {
+    position: relative;
+    z-index: 100;
+  }
+
+  .layers {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 994px;
+    @include centerX;
+  }
+
+  .stars {
+    &::before, &::after {
+      background: url(images/layers/resized/stars.png) no-repeat;
+      bottom: 0;
+    }
+    @include verticalMirror(809px, -1);
+  }
+
+  .grid {
+    &::before, &::after {
+      background: url(images/layers/resized/grid.png) no-repeat;
+      top: 0;
+    }
+    &::before {
+      margin-top: 100px;
+    }
+    @include verticalMirror(989px, -1);
+  }
+
+  .ground {
+    background: url(images/layers/resized/ground.png) no-repeat;
+    bottom: 0;
+    height: 389px;
+    @include staticCenter;
+  }
+
+  .pyramids {
+    background: url(images/layers/resized/pyramids.png) 0 44px no-repeat;
+    bottom: 0;
+    height: 454px;
+    @include staticCenter;
+    @include prefix(animation, melt_loop 8s linear 0s infinite alternate);
+    // transform: translate(100px, 50px) rotateX(45deg) rotateY(-200deg) rotateZ(10deg);
+  }
+
+  .shader {
+    height: 100%;
+    width: 100%;
+    @media screen and (min-width: $fullscreen) {
+      &::before, &::after {
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 150px;
+      }
+      &::before {
+        left: 0;
+        @include fader('left');
+      }
+      &::after {
+        right: 0;
+        @include fader('right');
+      }
+    }
   }
 }
