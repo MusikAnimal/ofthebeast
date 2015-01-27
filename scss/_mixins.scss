@@ -41,6 +41,22 @@ $fullscreen: 994px;
   }
 }
 
+@mixin horizontalMirror($width, $transform: 1) {
+  &::before, &::after {
+    content: "";
+    width: $width;
+    position: absolute;
+  }
+  &::after {
+    @if $transform == 1 {
+      margin-right: $width;
+    } @else {
+      margin-left: $width;
+    }
+    @include prefix(transform, scaleX($transform));
+  }
+}
+
 @mixin centerX {
   @include center(true,false);
 }

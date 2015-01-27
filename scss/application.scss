@@ -29,7 +29,8 @@ a {
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    width: $fullscreen;
+    // width: $fullscreen;
+    width: 100%;
     @media screen and (max-width: $fullscreen) {
       width: 100%;
     }
@@ -76,16 +77,19 @@ a {
   main {
     display: block;
     height: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%;
   }
 
   section {
-    bottom: 0;
+    top: 0;
     display: none;
     height: 100%;
     @include centerX;
+    & > *:first-child {
+      margin-top: 50px;
+    }
   }
 
   .layer {
@@ -97,49 +101,65 @@ a {
     }
   }
 
-  .stars {
-    &::before, &::after {
-      background: url(images/layers/resized/stars.png) no-repeat;
-      bottom: 0;
+  // .stars {
+  //   &::before, &::after {
+  //     background: url(images/layers/resized/stars.png) no-repeat;
+  //     bottom: 0;
+  //   }
+  //   @include verticalMirror(809px, -1);
+  // }
+
+  .horizon {
+    .sky {
+      &::before, &::after {
+        background: url(images/finals/sky.png) no-repeat;
+        height: 994px;
+        left: 0;
+        top: 0;
+      }
+      @include horizontalMirror(994px, -1);
     }
-    @include verticalMirror(809px, -1);
+    .grid {
+      &::before, &::after {
+        background: url(images/finals/grid.png) no-repeat;
+        height: 994px;
+        left: 0;
+        top: 0;
+      }
+      @include horizontalMirror(994px, -1);
+    }
   }
 
-  .grid {
-    &::before, &::after {
-      background: url(images/layers/resized/grid.png) no-repeat;
-      top: 0;
-    }
-    &::before {
-      margin-top: 100px;
-    }
-    @include verticalMirror(989px, -1);
-  }
-
-  .blur1 {
-    background: url(images/layers/resized/blur1.png) no-repeat;
+  .floor {
     bottom: 0;
-    height: 686px;
-    left: 0;
     position: absolute;
-    top: 0;
-    width: 567px;
-  }
-
-  .ground {
-    background: url(images/layers/resized/ground.png) no-repeat;
-    bottom: 0;
-    height: 389px;
-    @include staticCenter;
-  }
-
-  .pyramids {
-    background: url(images/layers/resized/pyramids.png) 0 44px no-repeat;
-    bottom: 0;
-    height: 454px;
-    @include staticCenter;
-    @include prefix(animation, melt_loop 8s linear 0s infinite alternate);
-    // transform: translate(100px, 50px) rotateX(45deg) rotateY(-200deg) rotateZ(10deg);
+    width: 100%;
+    @include prefix(transform,translate3d(0, 0, 0));
+    @include prefix(transition,transform 1s ease);
+    &.shifted {
+      @include prefix(transform,translate3d(-100px, 0, 0));
+    }
+    .ground {
+      &::before, &::after {
+        background: url(images/finals/ground.png) no-repeat;
+        bottom: 0;
+        height: 377px;
+        left: 0;
+      }
+      @include horizontalMirror(948px, -1);
+      @include prefix(transition,left 5s ease);
+    }
+    .pyramids {
+      background: url(images/finals/pyramids.png) 0 60px repeat-x;
+      bottom: 0;
+      height: 454px;
+      left: 0;
+      position: absolute;
+      // width: 1109px;
+      width: 100%;
+      @include prefix(animation, melt_loop 8s linear 0s infinite alternate);
+      // transform: translate(100px, 50px) rotateX(45deg) rotateY(-200deg) rotateZ(10deg);
+    }
   }
   @include keyframes(melt_loop) {
     0% { @include prefix(filter, saturate(0)); }

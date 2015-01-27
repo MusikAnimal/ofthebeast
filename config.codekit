@@ -96,6 +96,138 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/finals\/grid.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 974459,
+		"inputAbbreviatedPath": "\/images\/finals\/grid.png",
+		"outputAbbreviatedPath": "\/images\/finals\/grid.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/finals\/ground.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 547744,
+		"inputAbbreviatedPath": "\/images\/finals\/ground.png",
+		"outputAbbreviatedPath": "\/images\/finals\/ground.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/finals\/guy_and_painting.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.1306e+06,
+		"inputAbbreviatedPath": "\/images\/finals\/guy_and_painting.png",
+		"outputAbbreviatedPath": "\/images\/finals\/guy_and_painting.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/finals\/guy_and_painting_and_shadow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.17959e+06,
+		"inputAbbreviatedPath": "\/images\/finals\/guy_and_painting_and_shadow.png",
+		"outputAbbreviatedPath": "\/images\/finals\/guy_and_painting_and_shadow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/finals\/guy_and_painting_with_eyes.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.12941e+06,
+		"inputAbbreviatedPath": "\/images\/finals\/guy_and_painting_with_eyes.png",
+		"outputAbbreviatedPath": "\/images\/finals\/guy_and_painting_with_eyes.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/finals\/guy_and_painting_with_eyes_and_shadow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.17836e+06,
+		"inputAbbreviatedPath": "\/images\/finals\/guy_and_painting_with_eyes_and_shadow.png",
+		"outputAbbreviatedPath": "\/images\/finals\/guy_and_painting_with_eyes_and_shadow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/finals\/guy_eyes.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 57750,
+		"inputAbbreviatedPath": "\/images\/finals\/guy_eyes.png",
+		"outputAbbreviatedPath": "\/images\/finals\/guy_eyes.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/finals\/pyramids.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 201927,
+		"inputAbbreviatedPath": "\/images\/finals\/pyramids.png",
+		"outputAbbreviatedPath": "\/images\/finals\/pyramids.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/finals\/pyramids_uncropped.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 213038,
+		"inputAbbreviatedPath": "\/images\/finals\/pyramids_uncropped.png",
+		"outputAbbreviatedPath": "\/images\/finals\/pyramids_uncropped.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/finals\/shadows.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 63446,
+		"inputAbbreviatedPath": "\/images\/finals\/shadows.png",
+		"outputAbbreviatedPath": "\/images\/finals\/shadows.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/finals\/sky.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.45496e+06,
+		"inputAbbreviatedPath": "\/images\/finals\/sky.png",
+		"outputAbbreviatedPath": "\/images\/finals\/sky.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/finals\/sky_and_all.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.40888e+06,
+		"inputAbbreviatedPath": "\/images\/finals\/sky_and_all.png",
+		"outputAbbreviatedPath": "\/images\/finals\/sky_and_all.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/layers\/ground.png": {
 		"fileType": 32768,
 		"ignore": 0,

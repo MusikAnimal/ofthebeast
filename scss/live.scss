@@ -2,8 +2,11 @@
   width: 100%;
 
   iframe {
+    height: 50%;
+    height: calc(50% - 5vw);
+    max-width: 650px;
     width: 68%;
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 750px) {
       width: 88%;
     }
   }
