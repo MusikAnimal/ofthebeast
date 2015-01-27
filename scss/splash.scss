@@ -1,7 +1,5 @@
 body.splash {
-  @import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
-
-  font-family: 'Permanent Marker', serif;
+  font-family: 'Syncopate', serif;
   overflow: hidden;
 
   .autoresize {
@@ -41,6 +39,7 @@ body.splash {
 
   div {
     font-size: 30px;
+    margin-top: 10px;
   }
 
   .content {
