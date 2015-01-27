@@ -6,6 +6,11 @@
       });
     });
     this.get('#/news', function() {
+      app.getBlogger().then(function(data) {
+        // render template
+      }, function(e) {
+        alert("error fetching blog");
+      });
     });
     this.get('#/live', function() {
       $(".live").show().find("script").replaceWith(
@@ -22,9 +27,31 @@
     this.before({}, function(context) {
       $("section").hide();
     });
+
+    this.addListeners = function() {
+      $(document).on("mousemove", function(e) {
+        var screenWidth = $(window).width(),
+            pixelWidth = screenWidth / 100;
+            offset = (e.pageX / pixelWidth) - 100;
+        $(".floor").css("transform","matrix(1, 0, 0, 1, "+offset+", 0)");
+      });
+    };
+
+    this.getBlogger = function() {
+      return new Promise(function(resolve) {
+        $.ajax({
+          url: "https://www.googleapis.com/blogger/v3/blogs/8259058667594410675/posts",
+          data: {
+            key: "AIzaSyDalPoBDyrr9BZBf0674UNweT4GFXlbBXg"
+          },
+          success: resolve
+        });
+      });
+    };
   });
 
   $(function() {
     app.run();
+    app.addListeners();
   });
 })(jQuery);

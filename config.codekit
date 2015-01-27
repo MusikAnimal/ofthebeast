@@ -30,7 +30,7 @@
 		"outputAbbreviatedPath": "\/application.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 0
 		},
 	"\/dev\/index.html": {
