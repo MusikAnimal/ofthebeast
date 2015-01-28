@@ -7,7 +7,28 @@
     });
     this.get('#/news', function() {
       app.getBlogger().then(function(data) {
-        // render template
+        var posts = data.items;
+
+        for(i in posts) {
+          var formattedDate = new Date(posts[i].published)
+            .toLocaleString("en-US", {
+              month : "short",
+              day : "numeric",
+              year : "numeric"
+            }).replace(/,/g,"");
+          var strippedContent = $(
+              "<div>" + posts[i].content + "</div>"
+            ).text();
+
+          var $html = $(Handlebars.templates.post(
+            $.extend(posts[i], {
+              strippedContent : strippedContent,
+              formattedDate : formattedDate
+            })
+          ));
+
+          $(".news").append($html).show();
+        }
       }, function(e) {
         alert("error fetching blog");
       });

@@ -1,0 +1,20 @@
+.news {
+  font-family: 'Syncopate', serif;
+  font-size: 14px;
+  max-width: 650px;
+  padding-bottom: 200px;
+  width: 68%;
+
+  &::before {
+    content: "";
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 88%;
+  }
+
+  article {
+    margin-top: 50px;
+    text-align: justify;
+  }
+}

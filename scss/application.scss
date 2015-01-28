@@ -1,6 +1,7 @@
 @import 'mixins';
 @import 'splash';
 @import 'home';
+@import 'news';
 @import 'live';
 @import 'music';
 
@@ -36,7 +37,7 @@ a {
     }
   }
 
-  header {
+  header.title {
     font-family: 'Syncopate', sans-serif;
     font-size: 72px;
     // font-weight: 400;
@@ -80,6 +81,7 @@ a {
   main {
     display: block;
     height: 100%;
+    overflow: scroll;
     position: relative;
     top: 0;
     width: 100%;
