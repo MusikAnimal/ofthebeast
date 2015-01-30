@@ -2,17 +2,19 @@ $bgcolor: #292E37;
 $font: serif;
 $fullscreen: 994px;
 
-@mixin center($horiz: true, $vert: true) {
+@mixin center($direction: 'all') {
   position: absolute;
-  @if($vert) {
+  @if($direction == 'vertical') {
     top: 50%;
     @include prefix(transform,translateY(-50%));
   }
-  @if($horiz) {
+  @if($direction == 'horizontal') {
     left: 50%;
     @include prefix(transform,translateX(-50%));
   }
-  @if($horiz and $vert) {
+  @if($direction == 'all') {
+    left: 50%;
+    top: 50%;
     @include prefix(transform,translate(-50%,-50%));
   }
 }
@@ -55,10 +57,6 @@ $fullscreen: 994px;
     }
     @include prefix(transform, scaleX($transform));
   }
-}
-
-@mixin centerX {
-  @include center(true,false);
 }
 
 @mixin fader($direction: 'left') {

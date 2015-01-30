@@ -33,12 +33,13 @@ body.splash {
 
   header {
     font-size: 72px;
+    letter-spacing: 5px;
     padding-top: 75px;
     position: initial;
     white-space: nowrap;
-    @media screen and (max-width: 786px) {
+    @media screen and (max-width: 750px) {
+      font-size: 9vw;
       padding-top: 50px;
-      font-size: 36px;
     }
   }
 
@@ -60,7 +61,7 @@ body.splash {
     position: absolute;
     top: 0;
     width: 994px;
-    @include centerX;
+    @include center('horizontal');
   }
 
   .stars {
@@ -82,20 +83,49 @@ body.splash {
     @include verticalMirror(989px, -1);
   }
 
-  .ground {
-    background: url(images/layers/resized/ground.png) no-repeat;
+  .floor {
     bottom: 0;
-    height: 389px;
-    @include staticCenter;
-  }
+    position: absolute;
+    width: 100%;
 
-  .pyramids {
-    background: url(images/layers/resized/pyramids.png) 0 44px no-repeat;
-    bottom: 0;
-    height: 454px;
-    @include staticCenter;
-    @include prefix(animation, melt_loop 8s linear 0s infinite alternate);
-    // transform: translate(100px, 50px) rotateX(45deg) rotateY(-200deg) rotateZ(10deg);
+    .ground {
+      @media screen and (min-width: 948px) {
+        &::before, &::after {
+          background: url(images/finals/ground.png) no-repeat;
+          bottom: 0;
+          height: 377px;
+          left: 0;
+        }
+        @include horizontalMirror(948px, -1);
+        @include prefix(transition,left 5s ease);
+      }
+      @media screen and (max-width: 947px) {
+        background: url(images/finals/ground.png) bottom center no-repeat;
+        background-size: 100%;
+        height: 377px;
+        width: 100%;
+      }
+      // background: url(images/finals/ground.png) no-repeat;
+      // bottom: 0;
+      // height: 389px;
+      // @include staticCenter;
+    }
+
+    .pyramids {
+      background: url(images/finals/pyramids.png) 0 60px repeat-x;
+      bottom: 0;
+      height: 454px;
+      left: 0;
+      position: absolute;
+      width: 3000px;
+      @include prefix(animation, melt_loop 8s linear 0s infinite alternate);
+      // transform: translate(100px, 50px) rotateX(45deg) rotateY(-200deg) rotateZ(10deg);
+      @media screen and (max-width: 947px) {
+        background-position: bottom center;
+        background-size: 100%;
+        width: 100%;
+      }
+    }
   }
 
   .shader {
