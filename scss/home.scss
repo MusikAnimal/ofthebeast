@@ -16,13 +16,19 @@
 //   while the subjects float up and down
 
 .guy-and-painting {
-  background: url(images/finals/guy_and_painting.png) 0 44px no-repeat;
+  background: url(images/finals/guy_and_painting.png) 0 bottom no-repeat;
   background-size: 640px 750px;
   bottom: 0;
   height: 750px;
   position: absolute;
-  right: 0;
+  // right: 0;
   width: 640px;
+  @include center('horizontal');
+  @media screen and (max-width: 640px) {
+    background-size: 100%;
+    left: 50%;
+    width: 100%;
+  }
 }
 
 // .guy {

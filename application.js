@@ -3144,22 +3144,22 @@ var __module0__ = (function(__dependency1__, __dependency2__, __dependency3__, _
     });
 
     this.addListeners = function() {
-      // if($(window).width() >= 948) {
-      //   $(document).on("mousemove", function(e) {
-      //     var screenWidth = $(window).width(),
-      //         pixelWidth = screenWidth / 100;
-      //         offset = (e.pageX / pixelWidth) - 100;
-      //     console.log(offset);
-      //     $(".floor").css("transform","matrix(1, 0, 0, 1, "+offset+", 0)");
-      //     $(".horizon").css("transform","matrix(1, 0, 0, 1, "+(-offset-100)+", 0)");
-      //   });
-      // }
+      if($(window).width() >= 948) {
+        $(document).on("mousemove", function(e) {
+          var screenWidth = $(window).width(),
+              pixelWidth = screenWidth / 100;
+              offset = (e.pageX / pixelWidth) - 100;
+          console.log(offset);
+          $(".floor").css("transform","matrix(1, 0, 0, 1, "+offset+", 0)");
+          $(".horizon").css("transform","matrix(1, 0, 0, 1, "+(-offset-100)+", 0)");
+        });
+      }
     };
 
     this.getBlogger = function() {
       return new Promise(function(resolve) {
         $.ajax({
-          url: "https://www.googleapis.com/blogger/v3/blogs/8259058667594410675/posts",
+          url: "https://www.googleapis.com/blogger/v3/blogs/6607117017690975215/posts",
           data: {
             key: "AIzaSyDalPoBDyrr9BZBf0674UNweT4GFXlbBXg"
           },
