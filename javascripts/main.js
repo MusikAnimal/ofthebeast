@@ -8,6 +8,7 @@
     this.get('#/news', function() {
       app.getBlogger().then(function(data) {
         var posts = data.items;
+        $(".news").html("");
 
         for(i in posts) {
           var formattedDate = new Date(posts[i].published)

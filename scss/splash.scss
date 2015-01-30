@@ -12,6 +12,11 @@ body.splash {
     }
   }
 
+  // #video {
+  //   display: none;
+  //   @include prefix(transition, opacity 1s ease);
+  // }
+
   iframe {
     height: 100%;
     left: 0;

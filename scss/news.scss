@@ -5,9 +5,11 @@
   padding-bottom: 200px;
   width: 68%;
 
-  &::before {
-    content: "";
-  }
+  // &::before {
+  //   content: "";
+  //   background: rgba($bgcolor,0) -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba($bgcolor,$from)), to(rgba($bgcolor,$to)));
+  //   background: rgba($bgcolor,0) -moz-linear-gradient(left, rgba($bgcolor,$from), rgba($bgcolor,$to));
+  // }
 
   @media screen and (max-width: 750px) {
     width: 88%;
