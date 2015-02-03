@@ -75,7 +75,7 @@ body.splash {
     @include prefix(transition,transform 500ms);
     .sky {
       &::before, &::after {
-        background: url(images/finals/sky.png) no-repeat;
+        background: url(images/sky.png) no-repeat;
         height: 994px;
         left: 0;
         top: 0;
@@ -84,7 +84,7 @@ body.splash {
     }
     .grid {
       &::before, &::after {
-        background: url(images/finals/grid.png) no-repeat;
+        background: url(images/grid.png) no-repeat;
         height: 994px;
         left: 0;
         top: 0;
@@ -120,7 +120,7 @@ body.splash {
     .ground {
       @media screen and (min-width: 948px) {
         &::before, &::after {
-          background: url(images/finals/ground.png) no-repeat;
+          background: url(images/ground.png) no-repeat;
           bottom: 0;
           height: 377px;
           left: 0;
@@ -129,19 +129,19 @@ body.splash {
         @include prefix(transition,left 5s ease);
       }
       @media screen and (max-width: 947px) {
-        background: url(images/finals/ground.png) bottom center no-repeat;
+        background: url(images/ground.png) bottom center no-repeat;
         background-size: 100%;
         height: 377px;
         width: 100%;
       }
-      // background: url(images/finals/ground.png) no-repeat;
+      // background: url(images/ground.png) no-repeat;
       // bottom: 0;
       // height: 389px;
       // @include staticCenter;
     }
 
     .pyramids {
-      background: url(images/finals/pyramids.png) 0 60px repeat-x;
+      background: url(images/pyramids.png) 0 60px repeat-x;
       bottom: 0;
       height: 454px;
       left: 0;
