@@ -3137,7 +3137,11 @@ var __module0__ = (function(__dependency1__, __dependency2__, __dependency3__, _
         $(".music").find("script").html()
       );
     });
-    this.get('#/join');
+    this.get('#/join', function() {
+      $(".join").show().find("script").replaceWith(
+        $(".join").find("script").html()
+      );
+    });
 
     this.before({}, function(context) {
       $("section").hide();

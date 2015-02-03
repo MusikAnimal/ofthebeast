@@ -1,0 +1,12 @@
+.join {
+  width: 100%;
+
+  iframe {
+    height: 185px;
+    max-width: 650px;
+    width: 68%;
+    @media screen and (max-width: 750px) {
+      width: 88%;
+    }
+  }
+}

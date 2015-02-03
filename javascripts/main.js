@@ -44,7 +44,11 @@
         $(".music").find("script").html()
       );
     });
-    this.get('#/join');
+    this.get('#/join', function() {
+      $(".join").show().find("script").replaceWith(
+        $(".join").find("script").html()
+      );
+    });
 
     this.before({}, function(context) {
       $("section").hide();
