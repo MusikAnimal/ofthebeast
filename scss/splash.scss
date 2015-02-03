@@ -2,6 +2,7 @@ body.splash {
   font-family: 'Syncopate', serif;
   height: 100%;
   overflow: hidden;
+  position: fixed;
   width: 100%;
 
   .autoresize {
@@ -66,24 +67,50 @@ body.splash {
     @include center('horizontal');
   }
 
-  .stars {
-    &::before, &::after {
-      background: url(images/layers/resized/stars.png) no-repeat;
-      bottom: 0;
+  .horizon {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    @include prefix(transform,translate3d(0, 0, 0));
+    @include prefix(transition,transform 500ms);
+    .sky {
+      &::before, &::after {
+        background: url(images/finals/sky.png) no-repeat;
+        height: 994px;
+        left: 0;
+        top: 0;
+      }
+      @include horizontalMirror(994px, -1);
     }
-    @include verticalMirror(809px, -1);
+    .grid {
+      &::before, &::after {
+        background: url(images/finals/grid.png) no-repeat;
+        height: 994px;
+        left: 0;
+        top: 0;
+      }
+      @include horizontalMirror(994px, -1);
+    }
   }
 
-  .grid {
-    &::before, &::after {
-      background: url(images/layers/resized/grid.png) no-repeat;
-      top: 0;
-    }
-    &::before {
-      margin-top: 100px;
-    }
-    @include verticalMirror(989px, -1);
-  }
+  // .stars {
+  //   &::before, &::after {
+  //     background: url(images/layers/resized/stars.png) no-repeat;
+  //     bottom: 0;
+  //   }
+  //   @include verticalMirror(809px, -1);
+  // }
+
+  // .grid {
+  //   &::before, &::after {
+  //     background: url(images/layers/resized/grid.png) no-repeat;
+  //     top: 0;
+  //   }
+  //   &::before {
+  //     margin-top: 100px;
+  //   }
+  //   @include verticalMirror(989px, -1);
+  // }
 
   .floor {
     bottom: 0;
