@@ -3148,15 +3148,21 @@ var __module0__ = (function(__dependency1__, __dependency2__, __dependency3__, _
     });
 
     this.addListeners = function() {
-      // if($(window).width() >= 948) {
-      //   $(document).on("mousemove", function(e) {
-      //     var screenWidth = $(window).width(),
-      //         pixelWidth = screenWidth / 100;
-      //         offset = (e.pageX / pixelWidth) - 100;
-      //     $(".floor").css("left",offset);
-      //     $(".horizon").css("left",-offset - 100);
-      //   });
-      // }
+      if($(window).width() >= 948) {
+        $(document).on("mousemove", function(e) {
+          var screenWidth = $(window).width(),
+              pixelWidth = screenWidth / 100,
+              screenHeight = $(window).height(),
+              pixelHeight = screenHeight / 100,
+              offsetX = (e.pageX / pixelWidth) - 100,
+              offsetY = (e.pageY / pixelHeight / 2) - 100;
+          // $(".grid").css("left",offset);
+          $(".sky").css({
+            left : -offsetX - 100,
+            top : -offsetY - 100
+          });
+        });
+      }
     };
 
     this.getBlogger = function() {
