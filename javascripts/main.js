@@ -51,16 +51,15 @@
     });
 
     this.addListeners = function() {
-      if($(window).width() >= 948) {
-        $(document).on("mousemove", function(e) {
-          var screenWidth = $(window).width(),
-              pixelWidth = screenWidth / 100;
-              offset = (e.pageX / pixelWidth) - 100;
-          console.log(offset);
-          $(".floor").css("transform","matrix(1, 0, 0, 1, "+offset+", 0)");
-          $(".horizon").css("transform","matrix(1, 0, 0, 1, "+(-offset-100)+", 0)");
-        });
-      }
+      // if($(window).width() >= 948) {
+      //   $(document).on("mousemove", function(e) {
+      //     var screenWidth = $(window).width(),
+      //         pixelWidth = screenWidth / 100;
+      //         offset = (e.pageX / pixelWidth) - 100;
+      //     $(".floor").css("left",offset);
+      //     $(".horizon").css("left",-offset - 100);
+      //   });
+      // }
     };
 
     this.getBlogger = function() {

@@ -50,6 +50,27 @@ a {
     }
   }
 
+  .social-icons {
+    position: relative;
+    z-index: 100;
+    $icons: 'facebook', 'twitter', 'instagram', 'youtube', 'reverbnation', 'bandcamp', 'soundcloud';
+    @each $icon in $icons {
+      .#{$icon} {
+        background: url(images/social/#{$icon}.png) no-repeat;
+        background-size: 40px;
+        margin: 0 3px;
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        @media screen and (max-width: 380px) {
+          background-size: 10vw;
+          height: 10vw;
+          width: 10vw;
+        }
+      }
+    }
+  }
+
   nav {
     font-family: 'Syncopate', sans-serif;
     font-size: 26px;
@@ -85,13 +106,12 @@ a {
     height: 100%;
     @include center('horizontal');
     & > *:first-child {
-      margin-top: 50px;
+      margin-top: 25px;
     }
   }
 
   .layer {
     pointer-events: none;
-    @include prefix(transition,opacity 5s ease);
     &.visible {
       opacity: 1;
     }
@@ -109,8 +129,8 @@ a {
     position: absolute;
     top: 0;
     width: 100%;
-    @include prefix(transform,translate3d(0, 0, 0));
-    @include prefix(transition,transform 500ms);
+    // @include prefix(transform,translate3d(0, 0, 0));
+    // @include prefix(transition,transform 500ms);
     .sky {
       &::before, &::after {
         background: url(images/finals/sky.png) no-repeat;
@@ -135,11 +155,11 @@ a {
     bottom: 0;
     position: absolute;
     width: 100%;
-    @include prefix(transform,translate3d(-100px, 0, 0));
-    @include prefix(transition,transform 500ms);
-    @media screen and (max-width: 948px) {
-      left: 100px;
-    }
+    // @include prefix(transform,translate3d(-100px, 0, 0));
+    // @include prefix(transition,transform 500ms);
+    // @media screen and (max-width: 948px) {
+    //   left: 100px;
+    // }
     &.shifted {
       @include prefix(transform,translate3d(-100px, 0, 0));
     }
@@ -152,7 +172,7 @@ a {
           left: 0;
         }
         @include horizontalMirror(948px, -1);
-        @include prefix(transition,left 5s ease);
+        // @include prefix(transition,left 5s ease);
       }
       @media screen and (max-width: 947px) {
         background: url(images/finals/ground.png) bottom center no-repeat;
