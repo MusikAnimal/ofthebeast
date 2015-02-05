@@ -17,9 +17,11 @@
               day : "numeric",
               year : "numeric"
             }).replace(/,/g,"");
-          var strippedContent = $(
-              "<div>" + posts[i].content + "</div>"
-            ).text();
+
+          // var strippedContent = $(
+          //     "<div>" + posts[i].content + "</div>"
+          //   ).text();
+          strippedContent = "<div>"+posts[i].content+"</div>";
 
           var $html = $(Handlebars.templates.post(
             $.extend(posts[i], {
@@ -55,7 +57,7 @@
     });
 
     this.addListeners = function() {
-      if($(window).width() >= 948) {
+      if($(window).width() >= 948 && navigator.userAgent.toLowerCase().indexOf('firefox') === -1) {
         $(document).on("mousemove", function(e) {
           var screenWidth = $(window).width(),
               pixelWidth = screenWidth / 100,
@@ -67,6 +69,10 @@
           $(".sky").css({
             left : -offsetX - 100,
             top : -offsetY - 100
+          });
+          $(".floor").css({
+            left : offsetX / 4,
+            bottom : (offsetY / 3) + 20
           });
         });
       }

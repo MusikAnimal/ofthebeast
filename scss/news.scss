@@ -1,9 +1,12 @@
 .news {
   font-family: 'Syncopate', serif;
   font-size: 14px;
+  overflow-y: scroll;
   max-width: 650px;
-  padding-bottom: 200px;
+  padding-bottom: 300px;
+  top: 10px !important;
   width: 68%;
+  @include prefix(box-sizing, border-box);
 
   // &::before {
   //   content: "";
@@ -17,6 +20,9 @@
 
   article {
     margin-top: 50px;
-    text-align: justify;
+    text-align: left;
+    iframe {
+      max-width: 100%;
+    }
   }
 }
