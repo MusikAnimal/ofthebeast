@@ -11,12 +11,11 @@
         $(".news").html("");
 
         for(i in posts) {
-          var formattedDate = new Date(posts[i].published)
-            .toLocaleString("en-US", {
-              month : "short",
-              day : "numeric",
-              year : "numeric"
-            }).replace(/,/g,"");
+          var months = new Array("January", "February", "March",
+            "April", "May", "June", "July", "August", "September",
+            "October", "November", "December");
+          var d = new Date(posts[i].published);
+          var formattedDate = months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
 
           // var strippedContent = $(
           //     "<div>" + posts[i].content + "</div>"
