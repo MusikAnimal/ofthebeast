@@ -33,31 +33,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/dev\/index.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/haml\/dev.haml": {
-		"escapeHTMLCharacters": 0,
-		"fileType": 256,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/haml\/dev.haml",
-		"noEscapeInAttributes": 0,
-		"outputAbbreviatedPath": "\/dev\/index.html",
-		"outputFormat": 2,
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 1,
-		"outputStyle": 0,
-		"useCDATA": 0,
-		"useDoubleQuotes": 0,
-		"useUnixNewlines": 0
-		},
 	"\/haml\/index.haml": {
 		"escapeHTMLCharacters": 0,
 		"fileType": 256,
@@ -66,6 +41,22 @@
 		"inputAbbreviatedPath": "\/haml\/index.haml",
 		"noEscapeInAttributes": 0,
 		"outputAbbreviatedPath": "\/index.html",
+		"outputFormat": 2,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 0,
+		"useCDATA": 0,
+		"useDoubleQuotes": 0,
+		"useUnixNewlines": 0
+		},
+	"\/haml\/splash.haml": {
+		"escapeHTMLCharacters": 0,
+		"fileType": 256,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/haml\/splash.haml",
+		"noEscapeInAttributes": 0,
+		"outputAbbreviatedPath": "\/splash\/index.html",
 		"outputFormat": 2,
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
@@ -690,90 +681,90 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/social\/Facebook.png": {
+	"\/images\/social\/facebook.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1558,
-		"inputAbbreviatedPath": "\/images\/social\/Facebook.png",
-		"outputAbbreviatedPath": "\/images\/social\/Facebook.png",
+		"inputAbbreviatedPath": "\/images\/social\/facebook.png",
+		"outputAbbreviatedPath": "\/images\/social\/facebook.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/social\/Instagram.png": {
+	"\/images\/social\/instagram.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1990,
-		"inputAbbreviatedPath": "\/images\/social\/Instagram.png",
-		"outputAbbreviatedPath": "\/images\/social\/Instagram.png",
+		"inputAbbreviatedPath": "\/images\/social\/instagram.png",
+		"outputAbbreviatedPath": "\/images\/social\/instagram.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/social\/iTunes.png": {
+	"\/images\/social\/itunes.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1765,
-		"inputAbbreviatedPath": "\/images\/social\/iTunes.png",
-		"outputAbbreviatedPath": "\/images\/social\/iTunes.png",
+		"inputAbbreviatedPath": "\/images\/social\/itunes.png",
+		"outputAbbreviatedPath": "\/images\/social\/itunes.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/social\/ReverbNation.png": {
+	"\/images\/social\/reverbnation.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1876,
-		"inputAbbreviatedPath": "\/images\/social\/ReverbNation.png",
-		"outputAbbreviatedPath": "\/images\/social\/ReverbNation.png",
+		"inputAbbreviatedPath": "\/images\/social\/reverbnation.png",
+		"outputAbbreviatedPath": "\/images\/social\/reverbnation.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/social\/Soundcloud.png": {
+	"\/images\/social\/soundcloud.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1845,
-		"inputAbbreviatedPath": "\/images\/social\/Soundcloud.png",
-		"outputAbbreviatedPath": "\/images\/social\/Soundcloud.png",
+		"inputAbbreviatedPath": "\/images\/social\/soundcloud.png",
+		"outputAbbreviatedPath": "\/images\/social\/soundcloud.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/social\/Spotify.png": {
+	"\/images\/social\/spotify.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 2011,
-		"inputAbbreviatedPath": "\/images\/social\/Spotify.png",
-		"outputAbbreviatedPath": "\/images\/social\/Spotify.png",
+		"inputAbbreviatedPath": "\/images\/social\/spotify.png",
+		"outputAbbreviatedPath": "\/images\/social\/spotify.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/social\/Twitter.png": {
+	"\/images\/social\/twitter.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1846,
-		"inputAbbreviatedPath": "\/images\/social\/Twitter.png",
-		"outputAbbreviatedPath": "\/images\/social\/Twitter.png",
+		"inputAbbreviatedPath": "\/images\/social\/twitter.png",
+		"outputAbbreviatedPath": "\/images\/social\/twitter.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/social\/YouTube.png": {
+	"\/images\/social\/youtube.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 2110,
-		"inputAbbreviatedPath": "\/images\/social\/YouTube.png",
-		"outputAbbreviatedPath": "\/images\/social\/YouTube.png",
+		"inputAbbreviatedPath": "\/images\/social\/youtube.png",
+		"outputAbbreviatedPath": "\/images\/social\/youtube.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -980,6 +971,15 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
+		},
+	"\/splash.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/splash.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		}
 	},
 "hooks": [
